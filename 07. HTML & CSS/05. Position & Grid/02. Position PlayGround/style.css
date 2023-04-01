@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100wh;
+    height: 100vh;
+    position: relative;
+}
+
+.containerFirst {
+    background-color: rgb(26, 132, 194); 
+    background-image: linear-gradient(to right, rgb(25, 130, 190) , rgb(34, 157, 161));
+    width: 100%;
+    height: 50%;
+}
+
+.containerSecond {
+    background-color: rgb(194, 32, 121); 
+    background-image: linear-gradient(to right, rgb(194, 32, 121) , rgb(240, 151, 19));
+    width: 100%;
+    height: 50%;
+}
+
+.containerFirst .imgOne {
+    position: absolute;
+    top: 11%;
+    left: 36%;
+
+    transform: translate(-50%, - 50%);
+}
+
+.containerSecond .imgTwo {
+    position: absolute;
+    top: 75%;
+    left: 47%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+/* .container {
+    display: block;
+    position: absolute;
+    background-color: rgb(26, 132, 194); 
+    background-image: linear-gradient(to right, rgb(25, 130, 190) , rgb(34, 157, 161));
+    width: 100%;
+    height: 100%;
+}
+
+.card first{
+    display: block;
+}
+
+.first img {
+    position: relative;
+    top: 200px;
+    left: 40%;
+}
+
+.containerSecond {
+    position: relative;
+    background-color: rgb(194, 32, 121); 
+    background-image: linear-gradient(to right, rgb(194, 32, 121) , rgb(240, 151, 19));
+    width: 100%;
+    height: 100%;
+    top: 40%;
+}
+
+.second img {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+} */
