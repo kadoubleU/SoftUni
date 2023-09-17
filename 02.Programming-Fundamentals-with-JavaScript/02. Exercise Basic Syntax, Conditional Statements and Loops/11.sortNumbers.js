@@ -69,6 +69,23 @@ function sortNumber(a, b, c) {
     }
 }
 
+//SECOND VARIANT
+
+function sortNumbers(numOne, numTwo, numThree) {
+    let array = [];
+    array.push(numOne, numTwo, numThree);
+
+    array.sort();
+    array.reverse();
+
+    for(let i = 0; i < array.length; i++) {
+        let num = Number(array[i]);
+
+        console.log(num);
+    }
+
+}
+
 sortNumber(2,1,3);
 console.log("--------------");
 sortNumber(-2, 1, 3);
