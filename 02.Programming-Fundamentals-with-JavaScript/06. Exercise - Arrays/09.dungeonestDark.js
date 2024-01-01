@@ -67,3 +67,70 @@ function dungeonestDark(arr) {
 // dungeonestDark(["rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000"]);
 console.log("---------");
 dungeonestDark(["cat 10|potion 30|orc 10|chest 10|snake 25|chest 110"]);
+
+
+
+//SECOND VARIANT
+
+function dungeonestDark(input) {
+    let initialHealth = 100;
+    let initialCoins = 0;
+    let newArray = input.join("").split('|');
+    let bestRoom = 0;
+    let temporaryHealth = 0;
+
+    for(let i = 0; i < newArray.length; i++) {
+        let pair = newArray[i]; 
+        let pairArray = pair.split(" ");
+        
+        let name = pairArray[0];
+        let number = Number(pairArray[1]);
+
+       if(name === "potion") {
+            temporaryHealth = initialHealth;
+            initialHealth += number;
+
+            if(initialHealth > 100) {
+                initialHealth = 100;
+                number = initialHealth - temporaryHealth;
+            }
+
+            console.log(`You healed for ${number} hp.`);
+            console.log(`Current health: ${initialHealth} hp.`)
+            bestRoom++;
+
+       }else if(name === "chest") {
+        initialCoins += number;
+        console.log(`You found ${number} coins.`);
+        bestRoom++;
+
+       }else {
+            initialHealth -= number;
+
+            if(initialHealth > 0) {
+                console.log(`You slayed ${name}.`)
+                bestRoom++;
+            }else {
+                console.log(`You died! Killed by ${name}.`);
+                bestRoom++;
+                break;
+            }
+       }
+
+       name = "";
+       number = 0;
+
+    }
+   
+   if(initialHealth > 0) {
+    console.log("You've made it!");
+    console.log(`Coins: ${initialCoins}`);
+    console.log(`Health: ${initialHealth}`);
+   } else {
+    console.log(`Best room: ${bestRoom}`);
+   }
+
+}
+
+dungeonestDark(["cat 10|potion 30|orc 10|chest 10|snake 25|chest 110"]
+);

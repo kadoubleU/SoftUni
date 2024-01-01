@@ -26,3 +26,22 @@ function rotateArray(arr) {
 
 rotateArray(["1", "2", "3", "4", "2"]);
 rotateArray(["Banana", "Orange", "Coconut", "Apple", "15"]);
+
+
+//SECOND VARIANT
+
+function rotateArray(data) {
+    let rotations = data.pop();
+  
+    for (let i = 0; i < rotations; i++) {
+      let element = data.pop();
+      data.unshift(element);
+    }
+  
+    console.log(data.join(" "));
+  }
+  
+  rotateArray(["1", "2", "3", "4", "2"]);
+  rotateArray(['Banana', 'Orange', 'Coconut',
+  'Apple', '15']);
+  
