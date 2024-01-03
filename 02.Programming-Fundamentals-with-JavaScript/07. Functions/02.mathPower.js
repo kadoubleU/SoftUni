@@ -10,3 +10,14 @@ function mathPower(num, power) {
 
 console.log(mathPower(2,8));
 console.log(mathPower(3,4));
+
+//SECOND VARIANT
+
+function mathPower(number, power) {
+    let powerCalculation  = number ** power;
+    
+    return powerCalculation;
+}
+
+let mathPowerFunction = mathPower(2,8);
+console.log(mathPowerFunction);
