@@ -20,3 +20,28 @@ function characterInRange(firstChar, lastChar) {
 console.log(characterInRange("a", "d"));
 console.log(characterInRange("#", ":"));
 console.log(characterInRange("C", "#"));
+
+
+//SECOND VARIANT
+
+function charactersInRange(firstChar, secondChar) {
+    let smallestChar = Math.min(firstChar.charCodeAt(), secondChar.charCodeAt());
+    let biggestChar = Math.max(firstChar.charCodeAt(), secondChar.charCodeAt());
+    let stringFromChars = "";
+  
+    for (
+      let decimalCode = smallestChar + 1;
+      decimalCode < biggestChar;
+      decimalCode++
+    ) {
+      let char = String.fromCharCode(decimalCode);
+      stringFromChars += char + " ";
+    }
+  
+    return stringFromChars;
+  }
+  
+  console.log(charactersInRange("a", "d"));
+  console.log(charactersInRange("#", ":"));
+  console.log(charactersInRange("C", "#"));
+  

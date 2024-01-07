@@ -28,3 +28,29 @@ function palindromeIntegers(arr) {
 palindromeIntegers([123,323,421,121]);
 console.log("---------");
 (palindromeIntegers([32,2,232,1010]));
+
+
+
+//SECOND VARIANT
+
+function palindromeIntegers(arrayOfNumbers) {
+
+
+    for(let index = 0; index < arrayOfNumbers.length; index++) {
+        getNum = Number(arrayOfNumbers[index]);
+
+        let numbertoArray = String(getNum).split("");
+        let convertedNumber = numbertoArray.reverse().join("");
+        let reversedNumber = Number(convertedNumber);
+
+        if(getNum === reversedNumber) {
+            console.log(true);
+        }else {
+            console.log(false);
+        }
+    }
+}
+
+palindromeIntegers([123,323,421,121]);
+console.log("----------------")
+palindromeIntegers([32,2,232,1010]);
