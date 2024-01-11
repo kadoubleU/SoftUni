@@ -19,3 +19,27 @@ function sorting(arr) {
 
 sorting([1, 21, 3, 52, 69, 63, 31, 2, 18, 94]);
 sorting([34, 2, 32, 45, 690, 6, 32, 7, 19, 47]);
+
+
+//SECOND VARIANT
+
+function sorting(arr) {
+    let arrLength = arr.length;
+    let biggestNum = (arr.slice(0)).sort((a,b) => b - a); 
+    let smallestNum = (arr.slice(0)).sort((a,b) => a - b);
+ 
+
+    let result = [];
+
+    for(let q = 0; q < arrLength / 2; q++) {
+        let biggerNum = biggestNum[q];
+        let smallerNum = smallestNum[q];
+
+        result.push(biggerNum);
+        result.push(smallerNum);
+    }
+
+    console.log(result.join(" "));
+}
+
+sorting([1, 21, 3, 52, 69, 63, 31, 2, 18, 94]);
