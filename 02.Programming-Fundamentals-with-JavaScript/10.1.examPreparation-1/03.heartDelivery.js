@@ -46,17 +46,3 @@ spreadLove(["10@10@10@2", "Jump 1", "Jump 2", "Love!"]);
 console.log("---------");
 spreadLove(["2@4@2", "Jump 2", "Jump 2", "Jump 8", "Jump 3", "Jump 1", "Love!"]);
 
-
-
-
-
-
-// const 
-
-// 
-
-// if (failedPlaces === 0) {
-//     console.log('Mission was successful.');
-// } else {
-//     console.log(`Cupid has failed ${failedPlaces} places.`);
-// }
